@@ -1,0 +1,27 @@
+{
+  "name": "fc-todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k-m-jin/fc-todo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/k-m-jin/fc-todo/issues"
+  },
+  "homepage": "https://github.com/k-m-jin/fc-todo#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.0",
+    "parcel": "^2.6.0"
+  },
+  "dependencies": {
+    "sass": "^1.52.2"
+  }
+}

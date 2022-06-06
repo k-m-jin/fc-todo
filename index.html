@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MY TODO</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+    <link rel="stylesheet" href="./main.scss" />
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>My Todo</h1>
+      </header>
+      <div class="todo-box">
+        <form class="todo-add">
+          <input type="text" class="todo-add-input" />
+          <!-- <button>확인</button> -->
+        </form>
+
+        <div class="todo-list-box">
+          <ul class="todo-list">
+            <li class="todo-item">
+              <input type="checkbox" />
+              <input type="text" />
+              <button class="btn">수정</button>
+              <button class="btn">삭제</button>
+            </li>
+            <li class="todo-item">
+              <input type="checkbox" />
+              <input type="text" />
+              <button class="btn">수정</button>
+              <button class="btn">삭제</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
