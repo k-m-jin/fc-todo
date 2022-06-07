@@ -1,7 +1,8 @@
 //DOM
-const input = document.querySelector('.todo-add-input')
+const addInput = document.querySelector('.todo-add-input')
 const formEl = document.querySelector('.todo-add')
 
+let todos = []
 //
 const API_URL = 'https://asia-northeast3-heropy-api.cloudfunctions.net/api/todos'
 const API_KEY = 'FcKdtJs202204'
@@ -12,13 +13,21 @@ const headers = {
   username: 'KDT2_KimMyeongJin',
 }
 
-async function createTodo() {
+formEl.addEventListener('submit', async (e) => {
+  e.preventDefault()
+  await createTodo(addInput.value)
+  addInput.value = ''
+  addInput.focus()
+  readTodo()
+})
+
+async function createTodo(todoTitle) {
   const { data } = await axios({
     url: API_URL,
     method: 'POST',
     headers,
     data: {
-      title: '할 일 관리 프로젝트 과제 PR 생성',
+      title: todoTitle,
       done: false,
       order: 0,
     },
@@ -35,7 +44,7 @@ async function readTodo() {
   })
   console.log(res)
 }
-readTodo()
+// readTodo()
 
 async function deleteTodo(id) {
   const res = await axios({
@@ -44,5 +53,6 @@ async function deleteTodo(id) {
     headers,
   })
   console.log(res)
+  readTodo()
 }
-deleteTodo('5ClmE3kDLC15ycFmJGoI')
+// deleteTodo('GOBlaMf62IKe8xMJmKZc')

@@ -9,20 +9,21 @@
     <link rel="stylesheet" href="./main.scss" />
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="./main.js"></script>
+    <script defer src="./main.js"></script>
   </head>
   <body>
     <div class="container">
       <header>
-        <h1>My Todo</h1>
+        <h1>Todo List</h1>
       </header>
+
       <div class="todo-box">
         <form class="todo-add">
-          <input type="text" class="todo-add-input" />
+          <input type="text" class="todo-add-input" placeholder="할 일을 입력해 주세요." />
           <!-- <button>확인</button> -->
         </form>
-
         <div class="todo-list-box">
+          <h2>todos</h2>
           <ul class="todo-list">
             <li class="todo-item">
               <input type="checkbox" />

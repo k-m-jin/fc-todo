@@ -3,17 +3,21 @@ $main-grey: #3f3f3f;
 html,
 body {
   min-height: 100vh;
+  background-color: #d8dfe6;
   .container {
-    width: 50vw;
+    width: 70vw;
+    min-width: 350px;
     max-width: 600px;
     height: 90vh;
     margin: 20px auto;
-    border: 1px solid black;
+    // border: 1px solid black;
     border-radius: 30px;
-
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
     header {
-      margin: 2rem;
       h1 {
+        margin: 2rem;
         color: $main-blue;
         text-align: center;
         font-size: 2rem;
@@ -21,35 +25,45 @@ body {
       }
     }
     .todo-box {
-      // display: flex;
-
-      // justify-content: center;
-      // align-items: center;
-      // width: 100%;
       border: 1px solid red;
-      // margin: 0 auto;
-
-      .todo-add-input {
-        width: 90%;
-        height: 2rem;
-        font-size: 1.5rem;
+      width: 100%;
+      .todo-add {
         display: block;
-        margin: 0 auto;
-        padding: 0 15px;
-        outline: none;
-        // border: none;
-        border-bottom: 2px solid $main-grey;
-        box-sizing: border-box;
+        margin: 0;
+        // width: 100%;
+        // background-color: orange;
+        .todo-add-input {
+          display: block;
+          width: 100%;
+          height: 2rem;
+          font-size: 1.5rem;
+          font-weight: 400;
+          color: $main-grey;
+          margin: 1rem;
+          padding: 0 15px;
+          appearance: none;
+          outline: none;
+          border: none;
+          border-left: 2px solid $main-grey;
+          box-sizing: border-box;
+          background-color: transparent;
+          &:focus,
+          &:hover {
+            background-color: #dae6f6;
+          }
+        }
+      }
+      h2 {
+        color: #0064ff;
+        margin-left: 2rem;
       }
       .todo-list {
         border: 1px solid green;
-        margin: 1rem;
         padding: 1rem;
         list-style: none;
         .todo-item {
           margin: 1rem;
           border: 1px solid orange;
-          // display: flex;
           input {
             border: none;
             border-bottom: 1px solid $main-blue;
