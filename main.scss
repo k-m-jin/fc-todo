@@ -8,14 +8,14 @@ body {
     width: 70vw;
     min-width: 350px;
     max-width: 600px;
-    height: 90vh;
     margin: 20px auto;
-    // border: 1px solid black;
+    padding: 1rem;
     border-radius: 30px;
     display: flex;
     flex-direction: column;
     background-color: #fff;
     header {
+      border-bottom: 3px solid rgb(209, 209, 209);
       h1 {
         margin: 2rem;
         color: $main-blue;
@@ -25,48 +25,64 @@ body {
       }
     }
     .todo-box {
-      border: 1px solid red;
+      // border: 1px solid red;
       width: 100%;
       .todo-add {
         display: block;
         margin: 0;
-        // width: 100%;
-        // background-color: orange;
+        &:focus,
+        &:hover {
+          background-color: #dae6f6;
+        }
         .todo-add-input {
           display: block;
-          width: 100%;
-          height: 2rem;
-          font-size: 1.5rem;
+          width: 95%;
+          height: 3rem;
+          font-size: 2rem;
           font-weight: 400;
           color: $main-grey;
           margin: 1rem;
-          padding: 0 15px;
+
           appearance: none;
           outline: none;
           border: none;
           border-left: 2px solid $main-grey;
           box-sizing: border-box;
           background-color: transparent;
-          &:focus,
-          &:hover {
-            background-color: #dae6f6;
-          }
         }
       }
       h2 {
         color: #0064ff;
+        margin-top: 2rem;
         margin-left: 2rem;
+        font-size: 1.4rem;
       }
       .todo-list {
-        border: 1px solid green;
         padding: 1rem;
         list-style: none;
         .todo-item {
-          margin: 1rem;
-          border: 1px solid orange;
-          input {
-            border: none;
+          padding: 1rem;
+          font-size: 1.5rem;
+          display: flex;
+          align-items: center;
+          .item-check {
+            &:checked {
+              color: #3f3f3f;
+              font-style: italic;
+              color: #d8dfe6;
+              text-decoration: line-through;
+            }
+          }
+          .todo-title {
             border-bottom: 1px solid $main-blue;
+            margin-left: 1rem;
+            flex-grow: 1;
+            height: 30px;
+          }
+          .btn {
+            height: 30px;
+            margin-left: 1rem;
+            padding: 0.5rem;
           }
         }
       }
@@ -77,6 +93,9 @@ body {
         border: 1px solid $main-blue;
         border-radius: 2px;
         color: #fff;
+        &:hover {
+          background-color: rgba($color: $main-blue, $alpha: 0.6);
+        }
       }
     }
   }
